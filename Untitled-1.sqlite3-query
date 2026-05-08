@@ -1,0 +1,12 @@
+-- database: ./database.db
+
+SELECT * FROM Planets;
+
+--Planets except IDs
+SELECT Name, Diameter, ImageURL FROM Planets;
+
+--Order Planets by Size
+SELECT * FROM Planets
+ORDER BY Diameter;
+
+--

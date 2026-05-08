@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="title-bar">
+<h1>The Solar System</h1>
+</div>
+<div class="container">
+    {% for planet in planets %}
+        <div class="card">
+            <img src="{{ planet[2] }}" alt="{{ planet[0] }}">
+            <p><strong>{{ planet[0] }}</strong></p>
+            <p>{{ planet [1] }}</p>
+        </div>
+
+{% endfor %}
+</div>
+{% endblock %}

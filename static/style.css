@@ -1,0 +1,53 @@
+body {
+    background-color: #000000;
+}
+
+h1 {
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+p {
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title-bar {
+    height: 60px;
+    background-color: #3e6e82;
+}
+
+/* img {
+    width: 160px;
+    height: auto;
+} */
+
+.container {
+    display: grid;
+    /* This creates the 3-column layout for the cards inside */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+    padding: 50px;
+}
+
+.card {
+    /* Optional: adds a border or background to each planet "section" */
+    background-color: #00384e;
+    padding: 1px;
+    border: 2px solid #ddd;
+    border-radius: 1px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    /* display: block; */
+}
+
+.card p {
+    margin-top: 6%;
+}
