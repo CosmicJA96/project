@@ -22,7 +22,7 @@ p {
 }
 
 /* img {
-    width: 160px;
+    width: 100px;
     height: auto;
 } */
 
@@ -30,16 +30,16 @@ p {
     display: grid;
     /* This creates the 3-column layout for the cards inside */
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 80px;
-    padding: 50px;
+    gap: 3% 15%;
+    padding: 2% 14%;
 }
 
 .card {
     /* Optional: adds a border or background to each planet "section" */
     background-color: #00384e;
-    padding: 1px;
-    border: 2px solid #ddd;
-    border-radius: 1px;
+    padding: 0px;
+    border: 2px solid #121212;
+    border-radius: 0px;
 }
 
 .card img {
@@ -49,5 +49,5 @@ p {
 }
 
 .card p {
-    margin-top: 6%;
+    margin-top: 2%;
 }

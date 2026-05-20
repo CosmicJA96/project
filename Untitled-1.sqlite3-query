@@ -7,6 +7,18 @@ SELECT Name, Diameter, ImageURL FROM Planets;
 
 --Order Planets by Size
 SELECT * FROM Planets
-ORDER BY Diameter;
+ORDER BY Diameter_km;
 
---
+--Show [planet]'s moons
+SELECT * FROM Moons
+WHERE PlanetID = 5;
+
+--show moon and size for a particular planet
+SELECT  MoonID, Name, `Diameter-km`, ImageURL FROM Moons
+WHERE PlanetID = 6;
+
+SELECT * FROM Planets
+WHERE ID = 5;
+
+SELECT ID, Name, Diameter_km, ImageURL FROM Planets;
+

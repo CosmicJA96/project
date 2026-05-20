@@ -1,16 +1,19 @@
 {% extends "layout.html" %}
 {% block body %}
+<!--Heading-->
 <div class="title-bar">
-<h1>The Solar System</h1>
+<h1><ins>The Solar System</ins></h1>
 </div>
+<!--Layout-->
 <div class="container">
     {% for planet in planets %}
         <div class="card">
-            <img src="{{ planet[2] }}" alt="{{ planet[0] }}">
-            <p><strong>{{ planet[0] }}</strong></p>
-            <p>{{ planet [1] }}</p>
+            <a href="{{ url_for('planet', id=planet[0]) }}">
+            <img src="{{ planet[3] }}" alt="">
+            <p><strong>{{ planet[1] }}</strong></p>
+            <p>{{ planet[2] }}km</p>
+            </a>
         </div>
-
-{% endfor %}
+    {% endfor %}
 </div>
 {% endblock %}

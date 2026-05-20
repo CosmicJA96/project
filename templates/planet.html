@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<!--Heading-->
+<div class="title-bar">
+    <h1><ins>{{planet[1]}}</ins></h1>
+</div>
+<!--Just the planet-->
+<div>
+    <img src="{{ planet[3] }}" alt="">
+</div>
+<!--Moon heading-->
+<div>
+    <h1>Moons</h1>
+</div>
+<!--List of moons in 3 columns-->
+<div class="container">
+    {% for moon in moons %}
+        <div class="card">
+            <img src="{{ moon[3] }}" alt="">
+            <p>{{ moon[1] }}</p>
+            <p>{{ moon[2] }}km</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
