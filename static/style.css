@@ -9,6 +9,13 @@ h1 {
     font-style: normal;
 }
 
+h2 {
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
 p {
     color: white;
     font-family: "Titillium Web", sans-serif;
@@ -16,15 +23,26 @@ p {
     font-style: normal;
 }
 
+.card .name {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
 .title-bar {
     height: 60px;
     background-color: #3e6e82;
 }
 
-/* img {
-    width: 100px;
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info img {
+    width: 50%;
     height: auto;
-} */
+}
 
 .container {
     display: grid;
@@ -40,6 +58,18 @@ p {
     padding: 0px;
     border: 2px solid #121212;
     border-radius: 0px;
+    transition: 0.25s
+}
+
+.card:hover .name{
+    color: #ddddff;
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: white;
+    border: 2px solid white;
+    
 }
 
 .card img {

@@ -22,3 +22,5 @@ WHERE ID = 5;
 
 SELECT ID, Name, Diameter_km, ImageURL FROM Planets;
 
+SELECT * FROM Moons
+WHERE MoonID = 3;

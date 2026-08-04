@@ -4,14 +4,16 @@
 <div class="title-bar">
 <h1><ins>The Solar System</ins></h1>
 </div>
+<div>
+    <p>The solar system is a star and planetary system consisting of a single star, 8 major planets, 5 dwarf planets and nearly 900 known moons. There are 4 rocky planets in the inner solar system: Mercury, Venus, Earth and Mars. And 4 giant planets in the outer solar system: Jupiter, Saturn, Uranus and Neptune.</p>
+</div>
 <!--Layout-->
 <div class="container">
     {% for planet in planets %}
         <div class="card">
-            <a href="{{ url_for('planet', id=planet[0]) }}">
-            <img src="{{ planet[3] }}" alt="">
-            <p><strong>{{ planet[1] }}</strong></p>
-            <p>{{ planet[2] }}km</p>
+            <a class="name" href="{{ url_for('planet', id=planet[0]) }}">
+            <img src="{{ planet[2] }}" alt="">
+            <p class="name"><strong>{{ planet[1] }}</strong></p>
             </a>
         </div>
     {% endfor %}

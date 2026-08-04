@@ -26,7 +26,7 @@ def close_connection(exception):
 @app.route("/")
 def home():
     planets = query_db("""
-        SELECT ID, Name, Diameter_km, ImageURL FROM Planets;""")
+        SELECT ID, Name, ImageURL FROM Planets;""")
     return render_template("home.html", planets=planets)
 
 @app.route("/planet/<int:id>")
@@ -36,10 +36,18 @@ def planet(id):
         WHERE ID = ?;"""
     planet = query_db(sql,(id,),True)
     sql = """
-        SELECT MoonID, Name, `Diameter-km`, ImageURL FROM Moons 
+        SELECT MoonID, Name, ImageURL FROM Moons 
         WHERE PlanetID = ?;"""
     moons = query_db(sql,(id,),False)
     return render_template("planet.html", planet=planet, moons=moons)
+
+@app.route("/moon/<int:id>")
+def moon(id):
+    sql = """
+        SELECT * FROM Moons
+        WHERE MoonID = ?;"""
+    moon = query_db(sql,(id,),True)
+    return render_template("moon.html", moon=moon)
 
 ############################# Runner ###################################################################
 if __name__ == "__main__":
