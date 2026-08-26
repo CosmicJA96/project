@@ -23,11 +23,15 @@ def close_connection(exception):
 
 ############################# Routes ###################################################################
 
+#Home
+
 @app.route("/")
 def home():
     planets = query_db("""
         SELECT ID, Name, ImageURL FROM Planets;""")
     return render_template("home.html", planets=planets)
+
+#Planet
 
 @app.route("/planet/<int:id>")
 def planet(id):
@@ -40,6 +44,8 @@ def planet(id):
         WHERE PlanetID = ?;"""
     moons = query_db(sql,(id,),False)
     return render_template("planet.html", planet=planet, moons=moons)
+
+#Moon
 
 @app.route("/moon/<int:id>")
 def moon(id):

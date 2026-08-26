@@ -26,7 +26,7 @@ p {
 .card .name {
     color: #ffffff;
     text-decoration: none;
-    transition: 0.25s;
+    transition: color 0.5s;
 }
 
 .title-bar {
@@ -48,8 +48,9 @@ p {
     display: grid;
     /* This creates the 3-column layout for the cards inside */
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3% 15%;
-    padding: 2% 14%;
+    gap: 5% 15%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .card {
@@ -58,7 +59,8 @@ p {
     padding: 0px;
     border: 2px solid #121212;
     border-radius: 0px;
-    transition: 0.25s
+    transition: scale 0.5s, background-color 0.5s, border 0.5s;
+    scale: 90%;
 }
 
 .card:hover .name{
@@ -69,7 +71,7 @@ p {
 .card:hover {
     background-color: white;
     border: 2px solid white;
-    
+    scale: 100%;
 }
 
 .card img {
