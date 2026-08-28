@@ -2,7 +2,7 @@
 {% block body %}
 <!--heading-->
 <div class="title-bar">
-    <h1><ins>{{moon[2]}}</ins></h1>
+    <h1><ins>{{moon[0]}}</ins></h1>
 </div>
 <!--NavBar-->
 <ul>
@@ -11,14 +11,14 @@
 <!--moon image-->
 <div class="info">
     <div>
-        <img src="{{ moon[4] }}" alt="">
+        <img src="{{ moon[2] }}" alt="">
     </div>
     <!--moon info here-->
     <div>
         <h2>Info</h2>
-        <p>Diameter: {{moon[3]}}km</p>
-        <p>Orbital Speed: {{moon[5]}}km/s</p>
-        <p>Description: {{moon[6]}}</p>
+        <p>Diameter: {{moon[1]}}km</p>
+        <p>Orbital Speed: {{moon[3]}}km/s</p>
+        <p>Description: {{moon[4]}}</p>
     </div>
 </div>
 {% endblock %}

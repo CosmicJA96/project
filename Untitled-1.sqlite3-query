@@ -3,7 +3,10 @@
 SELECT * FROM Planets;
 
 --Planets except IDs
-SELECT Name, Diameter_km, ImageURL FROM Planets;
+SELECT Name, Diameter_km, ImageURL, `Orbitalspeed-km/s`, Description, `Rotation-hrs`, `Age-BillionYrs` FROM Planets;
+
+--Moons except IDs
+SELECT Name, `Diameter-km`, ImageURL, `Orbitalspeed-km/s`, Description FROM Moons;
 
 --Order Planets by Size
 SELECT * FROM Planets
@@ -17,10 +20,19 @@ WHERE PlanetID = 5;
 SELECT  MoonID, Name, `Diameter-km`, ImageURL FROM Moons
 WHERE PlanetID = 6;
 
+--show planet name and image
+SELECT Name, ImageURL FROM Planets;
+
+--show particular planet
+SELECT Name, Diameter_km, ImageURL, `Orbitalspeed-km/s`, Description, `Rotation-hrs`, `Age-BillionYrs` FROM Planets
+WHERE ID = 5;
+
+--specific planet
 SELECT * FROM Planets
 WHERE ID = 5;
 
 SELECT ID, Name, Diameter_km, ImageURL FROM Planets;
 
+--specific moon
 SELECT * FROM Moons
 WHERE MoonID = 3;

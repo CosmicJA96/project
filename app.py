@@ -47,7 +47,8 @@ def home():
 @app.route("/planet/<int:id>")
 def planet(id):
     sql = """
-        SELECT * FROM Planets
+        SELECT Name, Diameter_km, ImageURL, `Orbitalspeed-km/s`, Description,
+        `Rotation-hrs`, `Age-BillionYrs` FROM Planets
         WHERE ID = ?;"""
     planet = query_db(sql, (id,), True)
     sql = """
@@ -62,7 +63,8 @@ def planet(id):
 @app.route("/moon/<int:id>")
 def moon(id):
     sql = """
-        SELECT * FROM Moons
+        SELECT Name, `Diameter-km`, ImageURL, `Orbitalspeed-km/s`,
+        Description FROM Moons
         WHERE MoonID = ?;"""
     moon = query_db(sql, (id,), True)
     return render_template("moon.html", moon=moon)

@@ -2,7 +2,7 @@
 {% block body %}
 <!--Heading-->
 <div class="title-bar">
-    <h1><ins>{{planet[1]}}</ins></h1>
+    <h1><ins>{{planet[0]}}</ins></h1>
 </div>
 <!--NavBar-->
 <ul>
@@ -11,16 +11,16 @@
 <!--Just the planet-->
 <div class="info">
     <div>
-        <img src="{{ planet[3] }}" alt="">
+        <img src="{{ planet[2] }}" alt="">
     </div>
     <!-- planet info here -->
     <div class="planet-info">
         <h2>Info</h2>
-        <p>Diameter: {{planet[2]}}km</p>
-        <p>Orbital Speed: {{planet[4]}}km/s</p>
-        <p>Age: {{planet[7]}} billion yrs</p>
-        <p>Rotation: {{planet[6]}}hrs</p>
-        <p>Description: {{planet[5]}}</p>
+        <p>Diameter: {{planet[1]}}km</p>
+        <p>Orbital Speed: {{planet[3]}}km/s</p>
+        <p>Age: {{planet[6]}} billion yrs</p>
+        <p>Rotation: {{planet[5]}}hrs</p>
+        <p>Description: {{planet[4]}}</p>
     </div>
 </div>
 <!--Moon heading-->
