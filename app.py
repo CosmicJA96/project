@@ -1,6 +1,10 @@
+# Imports flask
 from flask import Flask, g, render_template
+# Imports SLQ
 import sqlite3
+# Database
 DATABASE = 'database.db'
+# App
 app = Flask(__name__)
 
 # Gets Database
@@ -93,8 +97,7 @@ def moon(id):
 
 # Runner ##########################################
 
-# Runs the Website
-
 
 if __name__ == "__main__":
+    # Runs the Website
     app.run(debug=True)
